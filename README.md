@@ -1,1 +1,1 @@
-# simple-js-app
+# basic-js-app
