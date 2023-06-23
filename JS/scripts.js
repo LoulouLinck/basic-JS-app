@@ -1,5 +1,5 @@
 let pokemonList = [
-    
+
   pokemon1 = {
          name: 'Balbusaur',
          height: 0.7,
