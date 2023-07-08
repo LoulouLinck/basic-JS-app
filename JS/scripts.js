@@ -45,3 +45,4 @@ pokemonRepository.getAll().forEach(function(pokemon) {
 
   document.write(pokemonDetails + "<br>"); 
 
+});
