@@ -35,12 +35,13 @@ getAll:getAll,
 add: add
 };
 })();
+
+pokemonRepository.getAll().forEach(function(pokemon) {
   let pokemonDetails = pokemon.name + " (height: " + pokemon.height + ")";
  
   if (pokemon.height > 1.1) {
     pokemonDetails += " - Wow that's big! ";
   }
 
-    document.write(pokemonDetails + "<br>"); 
+  document.write(pokemonDetails + "<br>"); 
 
-});
