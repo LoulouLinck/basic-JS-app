@@ -21,12 +21,13 @@ let pokemonList = [
     },
 ];
 
-// loop to go through all objects in PokemonList
-// conditional: if height of pokemon object in pokemonList > 1.1 add special msg, else write only name and height in DOM.
-for (let i=0; i < pokemonList.length; i++){
-  if (pokemonList[i].height > 1.1) {
-  document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") - Wow that's big! ");
-  } else {
-    document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") ");
+pokemonList.forEach(function(pokemon) {
+  let pokemonDetails = pokemon.name + " (height: " + pokemon.height + ")";
+ 
+  if (pokemon.height > 1.1) {
+    pokemonDetails += " - Wow that's big! ";
   }
-}
+
+    document.write(pokemonDetails + "<br>"); 
+
+});
