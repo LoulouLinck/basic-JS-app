@@ -22,7 +22,18 @@ let pokemonRepository = (function() {
     },
 ];
 
-pokemonList.forEach(function(pokemon) {
+function getAll() {
+  return pokemonList;
+}
+
+function add(pokemon) {
+  pokemonList.push(pokemon);
+}
+
+return {
+getAll:getAll,
+add: add
+};
 })();
   let pokemonDetails = pokemon.name + " (height: " + pokemon.height + ")";
  
