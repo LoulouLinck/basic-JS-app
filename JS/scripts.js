@@ -1,4 +1,4 @@
-let pokemonRepository = (function() { 
+let pokemonRepository = (function() { //wraps pookemonList arrray in IIFEs
   let pokemonList = [
 
  {
@@ -22,12 +22,16 @@ let pokemonRepository = (function() {
     },
 ];
 
-function getAll() {
+function getAll() { // returns all pokemon in pokemonList
   return pokemonList;
 }
 
-function add(pokemon) {
-  pokemonList.push(pokemon);
+function add(pokemon) { //adds pokemon object to array pokemonList
+  if (typeof pokemon === 'object' && //pokemon must be an object
+     Object.keys(pokemon) === ['name', 'height', 'types']) { //with the keys: name, height and types 
+   pokemonList.push(pokemon); 
+  }
+  
 }
 
 return {
@@ -36,7 +40,9 @@ add: add
 };
 })();
 
-pokemonRepository.getAll().forEach(function(pokemon) {
+//access array pokemonList inside IIFE w/ its returned public function getAll()
+//and calling pokemonRepository instead od pokemonList
+pokemonRepository.getAll().forEach(function(pokemon) { 
   let pokemonDetails = pokemon.name + " (height: " + pokemon.height + ")";
  
   if (pokemon.height > 1.1) {
