@@ -1,4 +1,4 @@
-let pokemonRepository = (function() { //wraps pookemonList arrray in IIFEs
+let pokemonRepository = (function() { //wraps pokemonList arrray in IIFE
   let pokemonList = [
 
  {
@@ -41,7 +41,7 @@ add: add
 })();
 
 //access array pokemonList inside IIFE w/ its returned public function getAll()
-//and calling pokemonRepository instead od pokemonList
+//and calling pokemonRepository instead of pokemonList
 pokemonRepository.getAll().forEach(function(pokemon) { 
   let pokemonDetails = pokemon.name + " (height: " + pokemon.height + ")";
  
