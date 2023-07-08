@@ -1,4 +1,5 @@
-let pokemonList = [
+let pokemonRepository = (function() { 
+  let pokemonList = [
 
  {
          name: 'Balbusaur',
@@ -22,6 +23,7 @@ let pokemonList = [
 ];
 
 pokemonList.forEach(function(pokemon) {
+})();
   let pokemonDetails = pokemon.name + " (height: " + pokemon.height + ")";
  
   if (pokemon.height > 1.1) {
