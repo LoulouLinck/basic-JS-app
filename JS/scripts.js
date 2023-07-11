@@ -34,21 +34,36 @@ function add(pokemon) { //adds pokemon object to array pokemonList
   
 }
 
+function addlistItem(pokemon){
+  let pokemonUl = document.querySelector('.pokemon-list'); // var assigned to <ul = "pokemon-list"> 
+  let listItem = document.createElement('li'); // creation of a list item
+  let button = document.createElement('button'); // creation of a button
+  button.innerText = pokemon.name; // set text in button element as element's names returned from pokemonRepository's array: pokemonList through IIFE access: getAll()  
+  button.classList.add('pokeButton'); // set new class attribute to our button
+  listItem.appendChild(button); // append button
+  pokemonUl.appendChild(listItem); // append li
+
+  button.addEventListener('click', function(){ // add event listener to button's of pokemon listed and runs function showDetails to each Pokemon objects
+    showDetails(pokemon);
+  });
+
+function showDetails(pokemon){ // logs pokemon object 
+console.log(pokemon);
+}
+}
+
 return {
 getAll:getAll,
-add: add
+add: add,
+addlistItem: addlistItem
 };
 })();
+
 
 //access array pokemonList inside IIFE w/ its returned public function getAll()
 //and calling pokemonRepository instead of pokemonList
 pokemonRepository.getAll().forEach(function(pokemon) { 
-  let pokemonDetails = pokemon.name + " (height: " + pokemon.height + ")";
- 
-  if (pokemon.height > 1.1) {
-    pokemonDetails += " - Wow that's big! ";
-  }
-
-  document.write(pokemonDetails + "<br>"); 
+pokemonRepository.addlistItem(pokemon); //ref. the variable holding the IIFE, call addListItem(), pass returned parameter 
 
 });
+
