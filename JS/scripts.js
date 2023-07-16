@@ -29,7 +29,9 @@ function addListItem(pokemon){
 }
 
 function showDetails(pokemon){ // logs pokemon object 
-console.log(pokemon);
+  pokemonRepository.loadDetails(pokemon).then(function(){
+  console.log(pokemon);  
+  });
 }
 
 function loadList(){
@@ -42,6 +44,7 @@ function loadList(){
         detailsUrl: item.url
       };
       add(pokemon);
+      console.log(pokemon);
     });
   }).catch(function(e) {
     console.error(e);
