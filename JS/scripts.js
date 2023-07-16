@@ -1,26 +1,6 @@
 let pokemonRepository = (function() { //wraps pokemonList arrray in IIFE
-  let pokemonList = [
-
- {
-         name: 'Balbusaur',
-         height: 0.7,
-         types: ['grass', 'poison'],
-    },
-
- {
-         name: 'Ninetales',
-         height: 1.1,
-         types: ['Fire'],
-
-    },
-
-  {
-         name: 'Mienshao',
-         height: 1.4,
-         types: ['Fighting'],
-
-    },
-];
+  let pokemonList = [];
+  let apiURL = 'https://pokeapi.co/api/v2/pokemon/?limit=150'; // API to which app will make requests 
 
 function getAll() { // returns all pokemon in pokemonList
   return pokemonList;
@@ -50,20 +30,36 @@ function addlistItem(pokemon){
 function showDetails(pokemon){ // logs pokemon object 
 console.log(pokemon);
 }
+
+function loadList(){
+  return fetch(apiURL).then(function(response){
+    return response.json();
+  }).then(function(json) {
+    json.results.forEach(function(item) {
+      let pokemon=  {
+        name: item.name,
+        detailsUrl: item.url
+      };
+      add(pokemon);
+    });
+  }).catch(function(e) {
+    console.error(e);
+  })
+}
 }
 
 return {
 getAll:getAll,
 add: add,
-addlistItem: addlistItem
+addlistItem: addlistItem,
+loadList: loadList
 };
 })();
 
-
+pokemonRepository.loadList().then(function(){
 //access array pokemonList inside IIFE w/ its returned public function getAll()
 //and calling pokemonRepository instead of pokemonList
-pokemonRepository.getAll().forEach(function(pokemon) { 
-pokemonRepository.addlistItem(pokemon); //ref. the variable holding the IIFE, call addListItem(), pass returned parameter 
-
+  pokemonRepository.getAll().forEach(function(pokemon) { 
+    pokemonRepository.addlistItem(pokemon); //ref. the variable holding the IIFE, call addListItem(), pass returned parameter 
+  });
 });
-
