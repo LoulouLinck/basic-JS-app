@@ -14,7 +14,7 @@ function add(pokemon) { //adds pokemon object to array pokemonList
   
 }
 
-function addlistItem(pokemon){
+function addListItem(pokemon){
   let pokemonUl = document.querySelector('.pokemon-list'); // var assigned to <ul = "pokemon-list"> 
   let listItem = document.createElement('li'); // creation of a list item
   let button = document.createElement('button'); // creation of a button
@@ -26,6 +26,7 @@ function addlistItem(pokemon){
   button.addEventListener('click', function(){ // add event listener to button's of pokemon listed and runs function showDetails to each Pokemon objects
     showDetails(pokemon);
   });
+}
 
 function showDetails(pokemon){ // logs pokemon object 
 console.log(pokemon);
@@ -46,13 +47,28 @@ function loadList(){
     console.error(e);
   })
 }
+
+function loadDetails(item) {
+  let url = item.detailsUrl;
+  return fetch(url).then(function (response) {
+    return response.json();
+  }).then(function (details) {
+    // Now we add the details to the item
+    item.imageUrl = details.sprites.front_default;
+    item.height = details.height;
+    item.types = details.types;
+  }).catch(function (e) {
+    console.error(e);
+  });
 }
 
 return {
 getAll:getAll,
 add: add,
-addlistItem: addlistItem,
-loadList: loadList
+addListItem: addListItem,
+loadList: loadList,
+loadDetails: loadDetails,
+showDetails: showDetails
 };
 })();
 
@@ -60,6 +76,6 @@ pokemonRepository.loadList().then(function(){
 //access array pokemonList inside IIFE w/ its returned public function getAll()
 //and calling pokemonRepository instead of pokemonList
   pokemonRepository.getAll().forEach(function(pokemon) { 
-    pokemonRepository.addlistItem(pokemon); //ref. the variable holding the IIFE, call addListItem(), pass returned parameter 
+    pokemonRepository.addListItem(pokemon); //ref. the variable holding the IIFE, call addListItem(), pass returned parameter 
   });
 });
