@@ -7,9 +7,13 @@ function getAll() { // returns all pokemon in pokemonList
 }
 
 function add(pokemon) { //adds pokemon object to array pokemonList
-  if (typeof pokemon === 'object' && //pokemon must be an object
-     Object.keys(pokemon) === ['name', 'height', 'types']) { //with the keys: name, height and types 
-   pokemonList.push(pokemon); 
+  if (
+    typeof pokemon === 'object' && //pokemon must be an object
+    'name' in pokemon
+    ){
+      pokemonList.push(pokemon);
+    } else {
+      console.log('pokemon is not correct');
   }
   
 }
