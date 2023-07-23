@@ -62,7 +62,7 @@ function addListItem(pokemon){
 
 function showDetails(pokemon){ // logs pokemon object 
   pokemonRepository.loadDetails(pokemon).then(function(){
-    showModal(('Modal title', 'This is the modal content!');
+    showModal('Modal title', 'This is the modal content!');
     console.log(pokemon);  
   });
 }
