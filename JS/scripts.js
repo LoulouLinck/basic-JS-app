@@ -7,6 +7,12 @@ let pokemonRepository = (function() { //wraps pokemonList arrray in IIFE
     modalContainer.classList.remove('is-visible');
   }
 
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+      hideModal();  
+    }
+  });
+
   function showModal(title, text) {
     
        // Clears all existing modal content
