@@ -10,9 +10,6 @@ let pokemonRepository = (function() { //wraps pokemonList arrray in IIFE
   function showModal() {
     modalContainer.classList.add('is-visible');
   }
-   document.querySelector('button').addEventListener('click', () => {
-   showModal();
-});
 
 function getAll() { // returns all pokemon in pokemonList
   return pokemonList;
