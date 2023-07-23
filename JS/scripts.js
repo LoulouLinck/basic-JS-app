@@ -21,7 +21,7 @@ let pokemonRepository = (function() { //wraps pokemonList arrray in IIFE
     }
   });
 
-  function showModal(title, text) {
+  function showModal(title, text, img) {
     
        // Clears all existing modal content
        modalContainer.innerHTML = '';
