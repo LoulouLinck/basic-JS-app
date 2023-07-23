@@ -30,6 +30,7 @@ let pokemonRepository = (function() { //wraps pokemonList arrray in IIFE
        modal.appendChild(closeButtonElement);
        modal.appendChild(titleElement);
        modal.appendChild(contentElement)
+       closeButtonElement.addEventListener('click', hideModal);
 
        modalContainer.classList.add('is-visible');
   }
