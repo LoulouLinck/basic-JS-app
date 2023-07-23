@@ -3,6 +3,10 @@ let pokemonRepository = (function() { //wraps pokemonList arrray in IIFE
   let apiURL = 'https://pokeapi.co/api/v2/pokemon/?limit=150'; // API to which app will make requests 
   let modalContainer = document.querySelector('#modal-container');
 
+  function hideModal() {
+    modalContainer.classList.remove('is-visible');
+  }
+
   function showModal(title, text) {
     
        // Clears all existing modal content
