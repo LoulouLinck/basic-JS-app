@@ -12,7 +12,7 @@ let pokemonRepository = (function() { //wraps pokemonList arrray in IIFE
       hideModal();  
     }
   });
-  
+
   modalContainer.addEventListener('click', (e) => {
     // listener also triggered by clicks on modal: child of modalContainer.
     let target = e.target; 
@@ -32,18 +32,25 @@ let pokemonRepository = (function() { //wraps pokemonList arrray in IIFE
        // Adds the new modal content
        let closeButtonElement = document.createElement('button');
        closeButtonElement.classList.add('modal-close');
-       closeButtonElement.innerText = 'Close';
+       closeButtonElement.innerText = 'X Close';
      
        let titleElement = document.createElement('h1');
        titleElement.innerText = title;
      
        let contentElement = document.createElement('p');
        contentElement.innerText = text;
+
+       let imageElement = document.createElement("img");
+       imageElement.setAttribute("src", img);
+       imageElement.setAttribute("width", "50%");
+       imageElement.setAttribute("height", "50%");
+       imageElement.setAttribute("alt", "Pokemon image");
       
        modalContainer.appendChild(modal);
        modal.appendChild(closeButtonElement);
        modal.appendChild(titleElement);
        modal.appendChild(contentElement)
+       modal.appendChild(imageElement);
        closeButtonElement.addEventListener('click', hideModal);
 
        modalContainer.classList.add('is-visible');
