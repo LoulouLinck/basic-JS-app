@@ -1,6 +1,14 @@
 let pokemonRepository = (function() { //wraps pokemonList arrray in IIFE
   let pokemonList = [];
   let apiURL = 'https://pokeapi.co/api/v2/pokemon/?limit=150'; // API to which app will make requests 
+  let modalContainer = document.querySelector('#modal-container');
+
+  function showModal() {
+    modalContainer.classList.add('is-visible');
+  }
+   document.querySelector('button').addEventListener('click', () => {
+   showModal();
+});
 
 function getAll() { // returns all pokemon in pokemonList
   return pokemonList;
@@ -34,7 +42,8 @@ function addListItem(pokemon){
 
 function showDetails(pokemon){ // logs pokemon object 
   pokemonRepository.loadDetails(pokemon).then(function(){
-  console.log(pokemon);  
+    showModal();
+    console.log(pokemon);  
   });
 }
 
