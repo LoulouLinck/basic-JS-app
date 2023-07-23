@@ -88,7 +88,7 @@ function addListItem(pokemon){
 
 function showDetails(pokemon){ // logs pokemon object 
   pokemonRepository.loadDetails(pokemon).then(function(){
-    showModal('Modal title', 'This is the modal content!');
+    showModal(pokemon.name, " Height: " + pokemon.height, pokemon.imageUrl);
     console.log(pokemon);  
   });
 }
