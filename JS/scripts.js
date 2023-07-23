@@ -12,6 +12,14 @@ let pokemonRepository = (function() { //wraps pokemonList arrray in IIFE
       hideModal();  
     }
   });
+  
+  modalContainer.addEventListener('click', (e) => {
+    // listener also triggered by clicks on modal: child of modalContainer.
+    let target = e.target; 
+    if (target === modalContainer) { //specifies modal should close only if click on overlay = turquoise part: modalContainer. 
+      hideModal();
+    }
+  });
 
   function showModal(title, text) {
     
