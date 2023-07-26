@@ -5,6 +5,11 @@ body {
   text-align: center;
 }
 
+.page-container {
+
+  margin-top: 60px;
+}
+
 h1 {
   font-family: 'Courier New', Courier, monospace;
 }
