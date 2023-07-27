@@ -6,12 +6,12 @@ This Pokedex project is a simple JavaScript app built using HTML, CSS, and JavaS
 
 The app showcasts a collection of 150 pokemons to browse through fetched from the RESTful Pokémon API: [PokéAPI](https://pokeapi.co/). The pokemons will get highlighted as the user hovers over them and can read more about any one of them thanks to a modal that will open when selecting the desired pokemon.
 The information displayed include its:
-<br> -Name
-<br> -Height
-<br> -Image
+<br> - Name
+<br> - Height
+<br> - Image
 <br>
 
-## Responsive Layout & Accessibility
+## RESPONSIVE LAYOUT & ACCESSIBILITY
 
 The app was tested to suit a wide spectrum of devices and with accessibility in mind.
 <br>
@@ -23,23 +23,24 @@ For a clean and usable design Bootstrap was implemented to the app. Thanks to th
 
 Languages used:
 <br>
--HTML
-<br>
--CSS
-<br>
--JavaScript
-<br>
-<br>
-Libraries used:
-<br>
--jQuery
-<br>
--Bootstrap
-<br>
-<br>
-Polyfills:
-<br>
--Promise
-<br>
--Fetch
-<br>
+
+- HTML
+  <br>
+- CSS
+  <br>
+- JavaScript
+  <br>
+  <br>
+  Libraries used:
+  <br>
+- jQuery
+  <br>
+- Bootstrap
+  <br>
+  <br>
+  Polyfills:
+  <br>
+- Promise
+  <br>
+- Fetch
+  <br>
