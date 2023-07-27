@@ -29,11 +29,13 @@ Languages used:
 <br>
 -JavaScript
 <br>
+<br>
 Libraries used:
 <br>
 -jQuery
 <br>
 -Bootstrap
+<br>
 <br>
 Polyfills:
 <br>
