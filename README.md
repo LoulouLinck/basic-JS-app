@@ -6,9 +6,9 @@ This Pokedex project is a simple JavaScript app built using HTML, CSS, and JavaS
 
 The app showcasts a collection of 150 pokemons to browse through fetched from the RESTful Pokémon API: [PokéAPI](https://pokeapi.co/). The pokemons will get highlighted as the user hovers over them and can read more about any one of them thanks to a modal that will open when selecting the desired pokemon.
 The information displayed include its:
-<sub><br> -Name
+<br> -Name
 <br> -Height
-<br> -Image </sub>
+<br> -Image
 <br>
 
 ## Responsive Layout & Accessibility
