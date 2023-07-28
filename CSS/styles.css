@@ -22,7 +22,7 @@ h1 {
 .gradient-border {
   border: 1%;
   height: 3px;
-  background-image: linear-gradient(to right, #00f59fb3, #00a1f5b3, #00a1f5b3, #00f59fb3);
+  background-image: linear-gradient(to right, #00f59fb3, #00f59f00);
   margin: 0;
 }
 
