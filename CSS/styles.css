@@ -39,32 +39,6 @@ li {
 }
 
 
-#modal-container {
-  display: none;
-}
-
-
-.modal {
-  margin: auto;
-  text-align: center;
-  display: inline-block;
-  box-sizing: border-box;
-  background: #fff;
-  padding: 15px;
-  width: 50%;
-  max-width: 700px;
-}
-
-.modal-close {
-  float: right;
-  -webkit-appearance: none;
-  appearance: none;
-  border: 0;
-  background: none;
-  color: #777;
-  text-decoration: underline;
-}
-
 .modal h1 {
   margin: 3%;
   text-align: left;
