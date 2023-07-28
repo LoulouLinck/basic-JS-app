@@ -15,7 +15,7 @@ body {
 }
 
 
-.pokedex-title {
+img.page-title {
   display: inline;
   padding: auto 20px;
 }
