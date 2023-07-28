@@ -47,6 +47,8 @@ let pokemonRepository = (function () {
     button.classList.add("pokeButton"); // set new class attribute to our button
     button.classList.add("btn"); //adds bootstrap  utility classes
     button.classList.add("btn-light"); //adds bootstrap  utility classes styling
+    button.classList.add("border-gradient");  
+    button.classList.add("border-gradient-blue");
     button.setAttribute("data-toggle", "modal"); //bootstrap adds e.listener
     button.setAttribute("data-target", "#exampleModal"); //bootstrap targets selected element per ID
     listItem.appendChild(button); // append button

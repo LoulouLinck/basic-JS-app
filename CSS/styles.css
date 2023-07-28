@@ -19,24 +19,36 @@ h1 {
   font-family: 'Courier New', Courier, monospace;
 }
 
-.pokeButton {
-  background-color: aquamarine;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 16px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  background-color: white;
-  color: black;
-  border: 2px solid aquamarine;
+.gradient-border {
+  border: 1%;
+  height: 3px;
+  background-image: linear-gradient(to right, #00f59fb3, #00a1f5b3, #00a1f5b3, #00f59fb3);
+  margin: 0;
+}
 
+.pokeButton {
+background: none;
+padding: 16px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-family: 'Courier New', Courier, monospace;
+font-size: 1rem;
+margin: 4px 2px;
+-webkit-transition-duration: 0.4s;
+transition-duration: 0.4s;
+cursor: pointer;
+color: black;
+}
+
+button.border-gradient {
+  border: 3px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+}
+
+button.border-gradient-blue {
+border-image-source: linear-gradient(to right, #00f59fb3, #00a1f5b3);
 }
 
 li {
