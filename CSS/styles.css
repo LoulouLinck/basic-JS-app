@@ -15,9 +15,11 @@ body {
 }
 
 
-img.page-title {
-  display: inline;
-  padding: auto 20px;
+title-box {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .gradient-border {
