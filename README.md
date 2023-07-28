@@ -1,6 +1,8 @@
 # basic-js-app: Pokedex
 
-This Pokedex project is a simple JavaScript app built using HTML, CSS, and JavaScript. It fetches some detailed data from an external API to display information about the different Pokemons showcasted on this website.
+This [Pokedex](file:///C:/Users/laure/Desktop/basic-JS-app/index.html) project is a simple JavaScript app built using HTML, CSS, and JavaScript. It fetches some detailed data from an external API to display information about the different Pokemons showcasted on this website.
+
+[Link to Pokedex App](file:///C:/Users/laure/Desktop/basic-JS-app/index.html)
 
 ## OVERVIEW
 
