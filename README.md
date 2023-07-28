@@ -44,3 +44,7 @@ Languages used:
   <br>
 - Fetch
   <br>
+
+## CREDITS
+
+[Flavicon] was used for logo (https://www.flaticon.com/free-icons/pokemon)
