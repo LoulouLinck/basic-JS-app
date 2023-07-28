@@ -57,3 +57,8 @@ li {
 .modal img {
   text-align: center;
 }
+
+.form-control {
+  display: inline-block;
+  width: 25%;
+}
