@@ -3,23 +3,6 @@ let pokemonRepository = (function () {
   let apiURL = "https://pokeapi.co/api/v2/pokemon/?limit=150"; // API to which app will make
   let modalContainer = document.querySelector("#modal-container");
 
-  //   function hideModal() {
-  //   modalContainer.classList.remove('is-visible');
-  // }
-  //   window.addEventListener('keydown', (e) => {
-  //   if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-  //     hideModal();
-  //   }
-  // });
-
-  //   modalContainer.addEventListener('click', (e) => {
-  //   // listener also triggered by clicks on modal: child of modalContainer.
-  //   let target = e.target;
-  //   if (target === modalContainer) { //specifies modal should close only if click on overlay = turquoise part: modalContainer.
-  //     hideModal();
-  //   }
-  // });
-
   function add(pokemon) {
     //adds pokemon object to array pokemonList
     if (typeof pokemon === "object" && "name" in pokemon) {
