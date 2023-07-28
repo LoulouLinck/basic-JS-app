@@ -42,6 +42,7 @@ let pokemonRepository = (function () {
     let listItem = document.createElement("li"); // creation of a list item
     listItem.classList.add("list-group-item"); //adds bootstrap
     listItem.classList.add("list-group-item-action"); //adds bootstrap hover styling
+   
     let button = document.createElement("button"); // creation of a button
     button.innerText += pokemon.name; // set text in button element as element's names returned from pokemonRepository's array: pokemonList through IIFE access: getAll()
     button.classList.add("pokeButton"); // set new class attribute to our button
@@ -51,6 +52,7 @@ let pokemonRepository = (function () {
     button.classList.add("border-gradient-blue");
     button.setAttribute("data-toggle", "modal"); //bootstrap adds e.listener
     button.setAttribute("data-target", "#exampleModal"); //bootstrap targets selected element per ID
+   
     listItem.appendChild(button); // append button
     pokemonUl.appendChild(listItem); // append li
 
@@ -113,14 +115,14 @@ let pokemonRepository = (function () {
     // Clears all existing modal content
     let modalBody = document.querySelector(".modal-body");
     let modalTitle = document.querySelector(".modal-title");
-    let modalHeader = document.querySelector(".modal-header");
-    let modalFooter = document.querySelector(".modal-footer");
+    // let modalHeader = document.querySelector(".modal-header");
+    // let modalFooter = document.querySelector(".modal-footer");
 
     modalTitle.innerHTML = "";
     modalBody.innerHTML = "";
 
     // name element of modal content
-    modalTitle.innerText = pokemon.id + ". " + pokemon.name + "\n";
+    modalTitle.innerText = pokemon.id + ". " + pokemon.name;
     let nameElement = document.createElement("h1");
     nameElement.textContent = pokemon.name;
     let imageElement = document.createElement("img");
@@ -128,14 +130,14 @@ let pokemonRepository = (function () {
     imageElement.style.width = "50%";
     imageElement.src = pokemon.imageUrl;
     let heightElement = document.createElement("p");
-    heightElement.textContent = "Height: " + pokemon.height;
+    heightElement.textContent = "Height: " + pokemon.height/10 + 'm';
     let typeElement = document.createElement("p");
     typeElement.textContent = "Types: " + pokemon.types[0];
     if (pokemon.types.length > 1) {
       typeElement.innerText += ", " + pokemon.types[1];
     }
 
-    modalTitle.appendChild(nameElement);
+    // modalTitle.appendChild(nameElement);
     modalBody.appendChild(imageElement);
     modalBody.appendChild(heightElement);
     modalBody.appendChild(typeElement);
