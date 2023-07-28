@@ -15,8 +15,9 @@ body {
 }
 
 
-h1 {
-  font-family: 'Courier New', Courier, monospace;
+pokedex-title {
+  display: inline;
+  padding: auto 20px;
 }
 
 .gradient-border {
