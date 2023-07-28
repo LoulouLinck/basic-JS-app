@@ -22,6 +22,14 @@ title-box {
   padding-bottom: 20px;
 }
 
+.page-title {
+  align-self: center;
+}
+
+#search-bar {
+  align-self: center;
+}
+
 .gradient-border {
   border: 1%;
   height: 3px;
