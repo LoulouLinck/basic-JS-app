@@ -116,7 +116,7 @@ let pokemonRepository = (function () {
         item.height = details.height / 10;
         item.types = item.types = [];
         for (let i = 0; i < details.types.length; i++) {
-            item.types[i] = details.types[i]["type"]["name"];
+          item.types[i] = details.types[i]["type"]["name"];
         }
       })
       .catch(function (e) {
@@ -145,9 +145,10 @@ let pokemonRepository = (function () {
     let heightElement = document.createElement("p");
     heightElement.textContent = "Height: " + pokemon.height;
     let typeElement = document.createElement("p");
-    typeElement.textContent = "Types: " + pokemon.types[0]; 
-    if (pokemon.types.length > 1){
+    typeElement.textContent = "Types: " + pokemon.types[0];
+    if (pokemon.types.length > 1) {
       typeElement.innerText += ", " + pokemon.types[1];
+    }
 
     modalTitle.appendChild(nameElement);
     modalBody.appendChild(imageElement);
