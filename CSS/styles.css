@@ -15,7 +15,7 @@ body {
 }
 
 
-title-box {
+.title-box {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
