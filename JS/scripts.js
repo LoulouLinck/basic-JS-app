@@ -114,11 +114,10 @@ let pokemonRepository = (function () {
         item.imageUrl = details.sprites.front_default;
         item.id = details.id;
         item.height = details.height / 10;
-        item.types = item.types;
-        // item.types = [];
-        // for (let i = 0; i < details.types.length; i++) {
-        //     item.types[i] = details.types[i]["type"]["name"];
-        // }
+        item.types = item.types = [];
+        for (let i = 0; i < details.types.length; i++) {
+            item.types[i] = details.types[i]["type"]["name"];
+        }
       })
       .catch(function (e) {
         console.error(e);
@@ -146,11 +145,14 @@ let pokemonRepository = (function () {
     let heightElement = document.createElement("p");
     heightElement.textContent = "Height: " + pokemon.height;
     let typeElement = document.createElement("p");
-    typeElement.textContent = "Type: " + pokemon.type;
+    typeElement.textContent = "Types: " + pokemon.types[0]; 
+    if (pokemon.types.length > 1){
+      typeElement.innerText += ", " + pokemon.types[1];
 
     modalTitle.appendChild(nameElement);
     modalBody.appendChild(imageElement);
     modalBody.appendChild(heightElement);
+    modalBody.appendChild(typeElement);
 
     // Footer previous + next buttons
     let leftButtonElement = document.querySelector(".previous-button");
