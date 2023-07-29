@@ -41,6 +41,10 @@ body {
   margin: 0;
 }
 
+li {
+  list-style-type: none;
+}
+
 .pokeButton {
 background: none;
 padding: 16px 32px;
@@ -66,16 +70,15 @@ button.border-gradient-blue {
 border-image-source: linear-gradient(to right, #00f59fb3, #00a1f5b3);
 }
 
-li {
-  list-style-type: none;
-}
-
+/* transparent overlay */
 .modal {
   background: #34fffa40;
 }
 
+/* capitalises 1st letter */
 .modal-content {
   background: #d9ff6f;
+  text-transform: capitalize; 
 }
 
 .modal h1 {
@@ -96,7 +99,8 @@ button.close:hover {
   text-align: center;
 }
 
-.modal-footer {
+/* adds empty space btw elements w/in footer */
+.modal-footer { 
   justify-content: space-between;
 }
 
