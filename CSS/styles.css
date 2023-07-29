@@ -71,8 +71,13 @@ li {
 }
 
 .modal {
-  background: rgba(39, 245, 231, 0.2);
+  background: #34fffa40;
 }
+
+.modal-content {
+  background: #d9ff6f;
+}
+
 .modal h1 {
   margin: 3%;
   text-align: left;
@@ -93,7 +98,7 @@ li {
     height: 25px;
     margin: 0;
     padding: 0;
-    background-color: lightgoldenrodyellow;
+    background-color: #d9ff6f;
     border: none;
 }
 
