@@ -14,11 +14,15 @@ body {
   width: 60px;
 }
 
-
 .title-box {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
+}
+
+.form-control {
+  display: inline-block;
+  width: 25%;
 }
 
 .page-title {
@@ -83,7 +87,13 @@ li {
   text-align: center;
 }
 
-.form-control {
-  display: inline-block;
-  width: 25%;
+#next-button,
+#previous-button {
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    background-color: lightgoldenrodyellow;
+    border: none;
 }
+
