@@ -83,6 +83,10 @@ li {
   text-align: left;
 }
 
+button.close:hover {
+  transform: scale(1.5);
+}
+
 .modal p {
   margin: 7% 3%;
   text-align: left;
@@ -105,4 +109,14 @@ li {
     background-color: #d9ff6f;
     border: none;
 }
+
+button#next-button:hover {
+  transform: scale(1.5);
+}
+
+button#previous-button:hover {
+  transform: scale(1.5);
+}
+
+
 
