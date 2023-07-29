@@ -92,6 +92,10 @@ li {
   text-align: center;
 }
 
+.modal-footer {
+  justify-content: space-between;
+}
+
 #next-button,
 #previous-button {
     width: 50px;
