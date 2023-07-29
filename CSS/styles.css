@@ -110,11 +110,11 @@ button.close:hover {
     border: none;
 }
 
-button#next-button:hover {
+button.next-button:hover {
   transform: scale(1.5);
 }
 
-button#previous-button:hover {
+button.previous-button:hover {
   transform: scale(1.5);
 }
 
