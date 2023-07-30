@@ -115,6 +115,8 @@ let pokemonRepository = (function () {
     // Clears all existing modal content
     let modalBody = document.querySelector(".modal-body");
     let modalTitle = document.querySelector(".modal-title");
+    let pokemonDetails = document.querySelector(".pokemon-details")
+    let modalImage = document.querySelector(".modal-pokemon-image")
     // let modalHeader = document.querySelector(".modal-header");
     // let modalFooter = document.querySelector(".modal-footer");
 
@@ -129,18 +131,18 @@ let pokemonRepository = (function () {
     imageElement.className = "modal-img";
     imageElement.style.width = "50%";
     imageElement.src = pokemon.imageUrl;
-    let heightElement = document.createElement("p");
+    let heightElement = document.querySelector(".height-detail");
     heightElement.textContent = "Height: " + pokemon.height/10 + 'm';
-    let typeElement = document.createElement("p");
+    let typeElement = document.querySelector(".types-detail");
     typeElement.textContent = "Types: " + pokemon.types[0];
     if (pokemon.types.length > 1) {
       typeElement.innerText += ", " + pokemon.types[1];
     }
 
     // modalTitle.appendChild(nameElement);
-    modalBody.appendChild(imageElement);
-    modalBody.appendChild(heightElement);
-    modalBody.appendChild(typeElement);
+    modalImage.appendChild(imageElement);
+    pokemonDetails.appendChild(heightElement);
+    pokemonDetails.appendChild(typeElement);
 
     // Footer previous + next buttons
     let leftButtonElement = document.querySelector(".previous-button");
