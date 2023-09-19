@@ -7,26 +7,24 @@
  <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
-
-> Describe 1-3 key features of the app
-
+ 
 - **Load data from an external source (API)**
 - **View a list of items**
 - **On user action (e.g., by clicking on a list item), view details for that item**
 
-## OVERVIEW
+### Overview
 
-The app showcasts a collection of 150 pokemons to browse through fetched from the RESTful Pokémon API: [PokéAPI](https://pokeapi.co/). The pokemons will get highlighted as the user hovers over them and can read more about any one of them thanks to a modal that will open when selecting the desired pokemon.
+> The app showcasts a collection of 150 pokemons to browse through fetched from the RESTful Pokémon API: [PokéAPI](https://pokeapi.co/). The pokemons will get highlighted as the user hovers over them and can read more about any one of them thanks to a modal that will open when selecting the desired pokemon.
 The information displayed include its:
 <br> **Name**
-<br> - **Height**
-<br> - **Image**
+<br> **Height**
+<br> **Image**
 <br>
 
 ![screenshot 1 of the pokédex app](./img/screenshot_pokédex_app.png)
 ![screenshot 2 of the pokédex app](./img/screenshot_prokemon_description_pokédex_app.png)
 
-## RESPONSIVE LAYOUT & ACCESSIBILITY
+### Responsive Layout & Accessibility
 
 The app was tested to suit a wide spectrum of devices and with accessibility in mind.
 <br>
