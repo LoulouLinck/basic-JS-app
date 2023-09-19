@@ -73,4 +73,4 @@ For a clean and usable design Bootstrap was implemented to the app. Thanks to th
 
 [Flavicon](https://www.flaticon.com/free-icons/pokemon) was used for logo 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">back to top</a></p>
