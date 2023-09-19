@@ -4,35 +4,9 @@
 
 **Link to Pokedex App:** https://louloulinck.github.io/basic-JS-app/
 
- <!-- Features -->
-
-### Key Features <a name="key-features"></a>
- 
-- **Load data from an external source (API)**
-- **View a list of items**
-- **On user action (e.g., by clicking on a list item), view details for that item**
-
-### Overview
-
-> The app showcasts a collection of 150 pokemons to browse through fetched from the RESTful Pokémon API: [PokéAPI](https://pokeapi.co/). The pokemons will get highlighted as the user hovers over them and can read more about any one of them thanks to a modal that will open when selecting the desired pokemon.
-The information displayed include its:
-<br> **Name**
-<br> **Height**
-<br> **Image**
-<br>
-
-![screenshot 1 of the pokédex app](./img/screenshot_pokédex_app.png)
-![screenshot 2 of the pokédex app](./img/screenshot_prokemon_description_pokédex_app.png)
-
-### Responsive Layout & Accessibility
-
-The app was tested to suit a wide spectrum of devices and with accessibility in mind.
-<br>
-Components incuding the modal and navigation bar are accessible to screen readers.
-<br>
-For a clean and usable design Bootstrap was implemented to the app. Thanks to this framework the layout of the library is set with optimal responsivity for a pleasant experience regardless of screen size.
-
 ## 🛠 Built With
+
+### Tech Stack
 
 <details>
   <summary>Client</summary>
@@ -66,7 +40,36 @@ For a clean and usable design Bootstrap was implemented to the app. Thanks to th
   </ul>
 </details>
 
-## CREDITS
+ <!-- Features -->
+
+### Key Features <a name="key-features"></a>
+ 
+- **Load data from an external source (API)**
+- **View a list of items**
+- **On user action (e.g., by clicking on a list item), view details for that item**
+
+### Overview
+
+> The app showcasts a collection of 150 pokemons to browse through fetched from the RESTful Pokémon API: [PokéAPI](https://pokeapi.co/). The pokemons will get highlighted as the user hovers over them and can read more about any one of them thanks to a modal that will open when selecting the desired pokemon.
+The information displayed include its:
+**Name**
+**Height**
+**Image**
+<br>
+
+![screenshot 1 of the pokédex app](./img/screenshot_pokédex_app.png)
+<br>
+![screenshot 2 of the pokédex app](./img/screenshot_prokemon_description_pokédex_app.png)
+
+### Responsive Layout & Accessibility
+
+The app was tested to suit a wide spectrum of devices and with accessibility in mind.
+<br>
+Components incuding the modal and navigation bar are accessible to screen readers.
+<br>
+For a clean and usable design Bootstrap was implemented to the app. Thanks to this framework the layout of the library is set with optimal responsivity for a pleasant experience regardless of screen size.
+
+## Credits
 
 [Flavicon](https://www.flaticon.com/free-icons/pokemon) was used for logo 
 
